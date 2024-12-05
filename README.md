@@ -30,10 +30,9 @@ Orange-Book-Type是为撰写简易笔记而设计的Typst模板，修改自flavi
 
 ### 具体使用
 
-使用模板首先需配置 `main.typ`，设置标题、描述、作者等信息，然后就可以在 `/content` 增补文件开始编写文档。如果要增加图像可以放在 `/fig` 文件夹内。如需要进一步更改文档格式，请修改 `/lib`文件夹内部的文件。
+使用模板首先需配置 `main.typ` ，设置标题、描述、作者等信息，然后就可以在 `/content` 增补文件开始编写文档。如果要增加图像可以放在 `/fig` 文件夹内。如需要进一步更改文档格式，请修改 `/lib` 文件夹内部的文件。
 
 > [!CAUTION]
 >
->如果要将文档拆分为多个文件进行组织，需要将 `#import "../template.typ": *` 添加到每个文件的顶部，以使某些函数（例如 `blockquote()`）正常工作。
->
-> 例如，假设你在项目根目录下有一个 `./content/chapter.typ` 文件和一个 `./template.typ` 文件，那么你需要在 `chapter.typ` 文件顶部添加 `#import "../template.typ": *`。
+> `/content` 文件夹下每个文件，将 `#import "../lib/template.typ": *` 添加到每个文件的顶部，以使某些函数正常工作。
+> `/content` 文件夹下每个文件，将 `#include "./content/xxx.typ"` 加入 `main.typ` 这个文档的后面让页面得以显示
