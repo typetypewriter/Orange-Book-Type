@@ -111,7 +111,7 @@
 // 制作假段落（用于完成统一的首行缩进）
 #let fakepar = context {
   let b = par[#box()]
-  let t = measure(b + b);
+  let t = measure([#b #b]);
 
   b
   v(-t.height)
@@ -595,15 +595,15 @@
       if it.level == 2 {
         set text(weight: "bold")
         size= title2
-        space = 1em
+        space = 0.5em + par-spacing
       }
       else if it.level == 3 {
         size= title3
-        space = 0.9em
+        space = 0.4em + par-spacing
       }
       else {
         size= title4
-        space = 0.7em
+        space = 0.4em + par-spacing
         color = black
       }
       set text(size: size)
@@ -615,8 +615,9 @@
         place(dx: -width - gap, num)
       }
       block(number + it.body)
-      v(space, weak: true)
       fakepar
+      v(space, weak: true)
+      
     }
     else {
       it
