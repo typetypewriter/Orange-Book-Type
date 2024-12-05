@@ -26,6 +26,7 @@ Orange-Book-Type是为撰写简易笔记而设计的Typst模板，修改自flavi
 - /lib/my-outline.typ 目录生成函数
 - /lib/theorems.typ 公式环境生成函数
 - /content 内容文件夹，存放各个章节
+- /content/pre.typ 前言
 - /fig 图片文件夹
 
 ### 具体使用
