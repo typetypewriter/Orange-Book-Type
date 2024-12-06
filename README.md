@@ -26,7 +26,6 @@ Orange-Book-Type是为撰写简易笔记而设计的Typst模板，修改自flavi
 - /lib/my-outline.typ 目录生成函数
 - /lib/theorems.typ 公式环境生成函数
 - /content 内容文件夹，存放各个章节
-- /content/pre.typ 前言
 - /fig 图片文件夹
 
 ### 具体使用
@@ -37,3 +36,11 @@ Orange-Book-Type是为撰写简易笔记而设计的Typst模板，修改自flavi
 >
 > `/content` 文件夹下每个文件，将 `#import "../lib/template.typ": *` 添加到每个文件的顶部，以使某些函数正常工作。
 > `/content` 文件夹下每个文件，将 `#include "./content/xxx.typ"` 加入 `main.typ` 这个文档的后面让页面得以显示
+
+`main.typ`
+
+
+
+## 版本更改日志
+
+ver 1.1 (2024-12-06): 修正了一些参数的符号，修改了前言的显示方法
